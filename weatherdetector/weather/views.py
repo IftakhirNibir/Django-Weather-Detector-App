@@ -12,6 +12,7 @@ def index(request):
     data = {}
     if request.method == "POST":
         cityname = request.POST['city']
+        cityname = cityname.capitalize()
         if cityname:
             try:
                 # Encode the city name to handle spaces
